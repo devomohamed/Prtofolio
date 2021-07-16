@@ -1,0 +1,502 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+section.active{
+    display: inline;
+    transition: .3s;
+}
+
+
+body{
+    display: flex;
+    background-color: #111111;
+    transition: .3s;
+}
+
+/* start nav */
+.nav-left{
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+}
+
+.nav-left .navcontent{
+    margin: 200px 0 0 59px;
+}
+.nav-left .navcontent h1{
+    font-size: 39px;
+    font-weight: bold;
+}
+.nav-left .navcontent ul{
+
+    list-style-type: none;
+    margin: 64px 0;
+
+}
+.nav-left .navcontent ul li{
+    padding: 5px 0;
+    height: 25px;
+}
+.nav-left .navcontent ul li a{
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+.nav-left .navcontent ul li a:hover{
+    /* font-size: 17px; */
+    letter-spacing: 2px;
+}
+.nav-left .navcontent p{
+    padding-right: 75px;
+}
+.nav-left .navcontent .icons{
+    display: none;
+}
+/* Responsive all devices excep large screen & desktops */
+@media (max-width: 991.98px) {
+    .nav-left{
+        width: 100%;
+        height:fit-content;
+    }
+    .nav-left .navcontent{
+        display: flex;
+        margin: 0% 5%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-left .navcontent ul{
+        display: none;
+    }
+    .nav-left .navcontent h1{
+        padding: 5px;
+        font-size: 30px;
+    } 
+    .nav-left .navcontent p{
+        display: none;
+    }
+    .nav-left .navcontent .icons{
+        display: block ;
+    }
+    .nav-left .navcontent .icons i{
+        margin-right: 3px;
+        cursor: pointer;
+    }
+}
+/* end nav */
+/* start home  */
+.home {
+    padding: 155px 0!important;
+    margin-left: 30%;
+    width: 70%;
+}
+.home .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.home .container .left{
+    width: 47%;
+}
+.home .container .text{
+    width: 47%;
+    color: #fff;
+    padding-top: 33px;
+}
+.home .text .name {
+    max-width: 100px;
+    font-size: 55px;
+}
+
+.social-icons {
+    margin-left: calc(21% + 20px);
+    margin-top: -35px;
+}
+
+.home img {
+        margin-top: 30px;
+}
+
+.home img {
+    width: 280px;
+    border-radius: 50%;
+}
+
+.home .name {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.home .info {
+    max-width: 450px;
+    line-height: 1.8;
+    font-size: 15px;
+    font-style: italic;
+    color: #b1b1b1;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.home .social-icons a {
+    color: #fff;
+    padding: 0 5px;
+    font-size: 17px;
+    text-decoration: none;
+}
+@media (max-width: 991.98px){
+    .home{
+        width: 100%;
+        margin-left: 0;
+    }
+    .home .container .left{
+        width: 100%;
+        text-align: center;
+    }
+    .home .container .text{
+        width: 100%;
+        text-align: center;
+    }
+    .home .container .social-icons{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .home .text .name {
+        max-width:none;
+        
+    }
+    .home .info{
+        max-width:none;
+    }
+
+}
+@media (max-width: 343px){
+    .home .container .left img{
+        width: 100%;
+    }
+}
+/* end home */
+/* start about */
+.about{
+    margin-left: 30%;
+    margin-top: 90px;
+    color: #fff;
+    display: none;
+}
+.about .container .contentall img{
+    width: 100%;
+}
+.about .container .contentall .contenttext{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.about .container .contentall .contenttext h3{
+
+}
+.about .container .contentall .contenttext .smallcontent{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.about .container .contentall .contenttext .smallcontent .left{
+    width: 47%;
+}
+.about .container .contentall .contenttext .smallcontent .left p{
+    margin-bottom: 39px;
+    line-height: 1.8;
+}
+.about .container .contentall .contenttext .smallcontent .left span{
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+.about .container .contentall .contenttext .smallcontent .left span:hover{
+    letter-spacing: 2px;
+}
+.about .container .contentall .contenttext .smallcontent .right{
+    width: 47%;
+}
+.about .container .contentall .contenttext .smallcontent .right div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.about .container .contentall .contenttext .smallcontent .right div h5{
+    font-size: 15px;
+    font-weight: bold;
+}
+.about .container .contentall .contenttext .smallcontent .right div span{
+    transition: .3s;
+}
+.about .container .contentall .contenttext .smallcontent .right div .mail:hover,
+.about .container .contentall .contenttext .smallcontent .right div .phone:hover{
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+@media (max-width: 991.98px){
+    .about{
+        margin-left: 0;
+        margin-top: 90px;
+    }
+    .about .container .contentall .contenttext .smallcontent{
+        display: block;
+    }
+    .about .container .contentall .contenttext .smallcontent .right ,
+    .about .container .contentall .contenttext .smallcontent .left{
+        width: 100%;
+    }
+    .about .container .contentall .contenttext .smallcontent .left{
+        margin-bottom: 50px;
+    }
+}
+/* end about */
+/* start Portfolio */
+.portfolio{
+    width: 70%;
+    color: white;
+    margin-left: 30%;
+    display: none;
+}
+.portfolio .contentall{
+    margin-top: 150px;
+}
+.portfolio .contentall span{
+    padding: 10px;
+    background-color: hsla(0,0%,100%,.08);
+    color: #999;
+    margin-bottom: 10px;
+}
+.portfolio .contentall .nav-portfolio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+.portfolio .contentall .nav-portfolio ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio .contentall .nav-portfolio ul li{
+    margin-left: 25px;
+}
+.portfolio .contentall .nav-portfolio ul li.active a{
+    color: #fff;
+}
+.portfolio .contentall .nav-portfolio ul li:hover{
+    letter-spacing: 2px;
+}
+.portfolio .contentall .nav-portfolio ul li a{
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+    color: #bbb;
+}
+.portfolio .contentall .nav-portfolio ul li a:hover{
+    
+}
+.portfolio .contentall .images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.portfolio .contentall .images img{
+    width: 47%;
+    height: 415px;
+    margin-bottom: calc(2% + 22px);
+    object-fit: cover;
+    transition: .3s;
+    cursor: pointer;
+    overflow: hidden;
+    transform-origin: 0 0;
+}
+.portfolio .contentall .images img:hover{
+    
+}
+@media (max-width: 991.98px){
+    .portfolio {
+        width: 100%;
+        color: white;
+        margin-left: 0;
+    }
+}
+@media (max-width: 575.98px) {
+    .portfolio .contentall .images img{
+        width: 100% ;
+    }
+}
+@media (max-width: 600px){
+    .portfolio .contentall .nav-portfolio h1{
+        margin-bottom: 30px;
+    }
+}
+/* end Portfolio */
+/* start  news */
+.news{
+    width: 70%;
+    color: white;
+    margin-left: 30%;
+    display: none;
+}
+.news .contentall{
+    margin-top: 150px;
+}
+.news .contentall span{
+    padding: 10px;
+    background-color: hsla(0,0%,100%,.08);
+    color: #999;
+    margin-bottom: 10px;
+}
+.news .contentall .nav-portfolio{
+    margin-top: 16px;
+    margin-bottom: 100px;
+}
+.news .contentall .boxes{
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.news .contentall .boxes .box{
+    width: 47%;
+    margin-bottom: calc(3% + 25px);
+    box-shadow: 0 0 20px #252525;
+    cursor: pointer;
+}
+.news .contentall .boxes .box .image{
+
+}
+.news .contentall .boxes .box .image img{
+    width: 100%;
+}
+.news .contentall .boxes .box .text{
+    background-color: #000;
+    padding: 40px;
+}
+.news .contentall .boxes .box .text span:first-child{
+    background-color: transparent;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.news .contentall .boxes .box .text p{
+    margin-bottom: 37px;
+    margin-top: 22px;
+}
+.news .contentall .boxes .box .text span:last-child{
+    background-color: transparent;
+    margin-top: 10px;
+    color: #fff;
+    transition:  .3s;
+}
+.news .contentall .boxes .box .text span:last-child:hover{
+    letter-spacing: 2px;
+}
+.news .contentall .boxes .box:nth-of-type(3) .image img{
+    height: 259px;
+}
+@media (max-width: 991.98px){
+    .news {
+        width: 100%;
+        color: white;
+        margin-left: 0;
+    }
+}
+@media (max-width: 575.98px) {
+    .news .contentall .boxes .box{
+        width: 100%;
+    }
+}
+/* end news */
+/* start contact */
+.contact{
+    width: 70%;
+    color: white;
+    margin-left: 30%;
+    display: none   ;
+}
+.contact .contentall{
+    margin-top: 150px;
+}
+.contact .contentall span{
+    padding: 10px;
+    background-color: hsla(0,0%,100%,.08);
+    color: #999;
+    margin-bottom: 10px;
+}
+.contact .contentall .nav-contact{
+    margin-top: 16px;
+    margin-bottom: 100px;
+}
+.contact .contentall .map{
+
+}
+.contact .contentall .map iframe{
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.contact input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    background: none;
+    outline: 0;
+    border: 1px solid #777;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.contact textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    background: none;
+    outline: 0;
+    border: 1px solid #777;
+    margin-bottom: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding-top: 15px;
+    resize: none;
+}
+
+.contact button {
+    text-align: center;
+    background-color: #fff;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+@media (max-width: 991.98px){
+    .contact{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+/* end contact */
